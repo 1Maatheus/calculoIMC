@@ -9,20 +9,20 @@ function calcular() {
   } else {
     let a = Number(altura.value);
     let p = Number(peso.value);
-    let res = Number(p / (a * a));
+    let res = Number(Math.floor(p / (a * a)));
 
     if (res < 18.5) {
-      resultado.innerHTML = "Abaixo do peso normal.";
+      resultado.innerText = `Abaixo do peso normal, IMC: ${res}`;
     } else if (res <= 24.9) {
-      resultado.innerHTML = "Peso normal.";
+      resultado.innerText = `Peso normal, IMC: ${res}`;
     } else if (res <= 29.9) {
-      resultado.innerHTML = "Sobrepeso.";
+      resultado.innerText = `Sobrepeso, IMC: ${res}`;
     } else if (res <= 34.9) {
-      resultado.innerHTML = "Obesidade grau I.";
+      resultado.innerText = `Obesidade grau I, IMC: ${res}`;
     } else if (res <= 39.9) {
-      resultado.innerHTML = "Obesidade grau II.";
+      resultado.innerText = `Obesidade grau II, IMC: ${res}`;
     } else if (res > 40) {
-      resultado.innerHTML = "Obesidade grau III.";
+      resultado.innerText = `Obesidade grau III, IMC: ${res}`;
     }
   }
 }
